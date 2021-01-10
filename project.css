@@ -1,22 +1,61 @@
+*, body, html {
+	margin:0;
+	padding: 0;
+	font: 1em "Open Sans",sans-serif;
+}
+
+body{
+	background-color:#eee;
+}
 h1{
 	text-align:center;
 	padding: 16px;
 }
 
+.mmenu{
+	width: 100%;
+	background-color: #333;
+	color: #fff;
+	height: 60px; 
+}
 
+.mmenu #logo{
+	float: left;
+	height:30px;
+	padding:15px 30px;
+	font-size:1.2em;
+	line-height: 30px; 
+}
+.mmenu > ul {
+margin:0;
+padding:0;
+float: left;
+list-style-type: none;
+}
+.mmenu >ul >li {
+	float:left;
+}
+.mmenu-item{
+ display: inline-block;
+ padding: 15px 20px;
+ line-height: 30px;
+ color: #fff;
+ text-decoration: none;
+}
+.mmenu-item:hover {
+ background-color: #ff0055;
+}
 .menu{
 	position: relative;
 	float:left;
-	left:-270px;
+	left:-260px;
 	width:260px;
-	height:180vh;
+	height:250vh;
 	background-color: crimson;
 	color:white;
 	z-index:999;
 	transition:all 2.5s;
 }
-
-
 .menu-open{
 	left:0px;
 	background-color:midnightblue;
@@ -35,10 +74,7 @@ h1{
 	line-height: 60px;
 	transition:all 2.5s;
 }
-
-
-
-.open-btn{
+.open-btn {
 	background-color: midnightblue;
 
 }
@@ -48,7 +84,7 @@ h1{
 	text-align: center;
 	line-height: 60px;
 	cursor: pointer;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid
 	darkgray;
 }li:hover{
 	background-color: darkgray;
@@ -59,7 +95,7 @@ h1{
 
 #son{
 	display:none;
-	width:100% !important;
+	width:100% ;
 }
 
 #son > li{
@@ -75,16 +111,43 @@ h1{
 	box-sizing: border-box;
 }
 
-.image{
-	position: relative;
-	height: :360px;
-	background-image: 
-	url("C:\Users\Ilyes\Desktop\RRR\soloProject\Image");
-	background-size: cover;
-	background-position: center;
-}
+body {
+        margin: 0;
+        padding: 0;
+    }
+    #slideshow {
+        position: relative;
+        overflow: hidden;
+        height: 100px;
+    }
+    #animate-area { 
+        height: 100%;
+        width: 2538px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url('http://s30.postimg.org/qnju89rkx/banner.png');
 
-.content{
-	width: 100vw;
+        -webkit-animation: animatedBackground 40s linear infinite;
+    }
+    /* Put your css in here */
+    @keyframes animatedBackground {
+        from { left: 0; }
+        to { left: -1269px; }
+    }
+    @-webkit-keyframes animatedBackground {
+        from { left: 0; }
+        to { left: -1269px; }
+    }
+    @-moz-keyframes animatedBackground {
+        from { left: 0; }
+        to { left: -1269px; }
+    }
+
+/*.content{
+	width: 70vw;
 	left:0px;
-}
+}*/
+
+
+

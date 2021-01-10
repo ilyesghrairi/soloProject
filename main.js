@@ -36,9 +36,9 @@ var yourBet=[
 	bet:""
 }
 ]
-function showResult(){
+function showMyBet(){
 var tbodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
-for (var i = yourBet.length - 1; i >= 0; i--) {
+for (var i = 0; i < yourBet.length ; i++) {
 	// Insert a row at the end of table
 var newRow = tbodyRef.insertRow();
 
