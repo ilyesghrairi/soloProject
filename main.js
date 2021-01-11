@@ -37,6 +37,45 @@ var yourBet=[
 }
 ]
 
+var resultBet=[
+{
+  id:1,
+    team1:'Esperance Sportive De Tunis',
+    team2:'Club Africain',
+  bet:""
+},{
+  id:2,
+    team1:'Etoile Du Sahel',
+    team2:'Club Sportive Sfaxien',
+  bet:""
+},{
+  id:3,
+    team1:'Stade Tunisien',
+    team2:'Club athlétique Bizertain',
+  bet:""
+},{
+  id:4,
+    team1:'Olympique Beja',
+    team2:'Etoile Sportive De Metlaoui',
+  bet:""
+},{
+  id:5,
+    team1:'Union Sportive De Tataouine',
+    team2:'Union Sportive De Benguerdane',
+  bet:""
+},{
+  id:6,
+    team1:'Union Sportive De Monastir',
+    team2:'Jeunesse Sportive Kairouanaise',
+  bet:""
+},{
+  id:7,
+    team1:'Avenie Sportive De Soliman',
+    team2:'Avenir Sportive De Rejiche',
+  bet:""
+}
+]
+
 function showMyBet(){
   var tbodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
  for (var i = 0; i < yourBet.length ; i++) {
@@ -53,13 +92,12 @@ function showMyBet(){
 }
 }
 
-
+var bet=["1","x","2"];
 function resultOfTheMatches(){
-  for(j=0;j<7;j++){
-  var randomBet=Math.floor(Math.random()*3);
-}
   var tbodyRef = document.getElementById('myTable2').getElementsByTagName('tbody')[0];
- for (var i = 0; i < yourBet.length ; i++) {
+ for (var i = 0; i < resultBet.length ; i++) {
+  var randomBet=Math.floor(Math.random()*3);
+   resultBet[i].bet=bet[randomBet]
    var newRow = tbodyRef.insertRow();
    var newCell1 = newRow.insertCell();
    var newText1 = document.createTextNode(yourBet[i].team1);
@@ -68,13 +106,10 @@ function resultOfTheMatches(){
    var newText2 = document.createTextNode(yourBet[i].team2);
   newCell2.appendChild(newText2);
    var newCell3 = newRow.insertCell();
-   var newText3 = document.createTextNode(randomBet);
+   var newText3 = document.createTextNode(bet[randomBet]);
   newCell3.appendChild(newText3);
  }
 }
-
-
-
 
 
 
@@ -103,6 +138,8 @@ $('ul#father>li').hover(function(){
 },function(){
 	$(this).find('ul#son').hide(400);        
 });
+
+
 
 //make a function that generates an array of 1 x 2
 // the length of the array == the length of the array of matches
