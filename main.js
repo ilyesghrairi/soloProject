@@ -109,7 +109,11 @@ function resultOfTheMatches(){
    var newText3 = document.createTextNode(bet[randomBet]);
   newCell3.appendChild(newText3);
  }
+ console.log(yourBet,resultBet)
 }
+
+
+
 
 
 
@@ -140,12 +144,21 @@ $('ul#father>li').hover(function(){
 });
 
 
+$("#checkOfResult").on("click",function(){
+   var arr=[];
+  for(var i =0;i<yourBet.length;i++){
+      if(yourBet[i].bet===resultBet[i].bet){
+    arr.push("true")
+  }
+    arr.push("false")    
+  }
+  console.log(arr)
+    if(arr.indexOf("false") !== -1){
+      window.alert("YOU LOSE");
+    }
+    else{
+      window.alert("YOU WON");
+    }  
+})
 
-//make a function that generates an array of 1 x 2
-// the length of the array == the length of the array of matches
 
-//  array generated [1,x,2,1,...] and your array or bets
-
-// for each elements of both array  you gonna compare all the elements
-// if it reachs the last elements return alert('congrats')
-// if el !== bet alert('loss')
