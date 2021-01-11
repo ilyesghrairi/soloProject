@@ -130,7 +130,6 @@ body {
 
         -webkit-animation: animatedBackground 40s linear infinite;
     }
-    /* Put your css in here */
     @keyframes animatedBackground {
         from { left: 0; }
         to { left: -1269px; }
@@ -144,10 +143,6 @@ body {
         to { left: -1269px; }
     }
 
-/*.content{
-	width: 70vw;
-	left:0px;
-}*/
 
 
 

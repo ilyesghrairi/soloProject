@@ -36,57 +36,48 @@ var yourBet=[
 	bet:""
 }
 ]
+
 function showMyBet(){
-var tbodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
-for (var i = 0; i < yourBet.length ; i++) {
-	// Insert a row at the end of table
-var newRow = tbodyRef.insertRow();
-
-// Insert a cell at the end of the row
-var newCell1 = newRow.insertCell();
-// Append a text node to the cell
-var newText1 = document.createTextNode(yourBet[i].team1);
-newCell1.appendChild(newText1);
-
-// Insert a cell at the end of the row
-var newCell2 = newRow.insertCell();
-// Append a text node to the cell
-var newText2 = document.createTextNode(yourBet[i].team2);
-newCell2.appendChild(newText2);
-
-// Insert a cell at the end of the row
-var newCell3 = newRow.insertCell();
-// Append a text node to the cell
-var newText3 = document.createTextNode(yourBet[i].bet);
-newCell3.appendChild(newText3);
+  var tbodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+ for (var i = 0; i < yourBet.length ; i++) {
+   var newRow = tbodyRef.insertRow();
+   var newCell1 = newRow.insertCell();
+   var newText1 = document.createTextNode(yourBet[i].team1);
+  newCell1.appendChild(newText1);
+   var newCell2 = newRow.insertCell();
+   var newText2 = document.createTextNode(yourBet[i].team2);
+  newCell2.appendChild(newText2);
+   var newCell3 = newRow.insertCell();
+   var newText3 = document.createTextNode(yourBet[i].bet);
+  newCell3.appendChild(newText3);
 }
 }
 
-//function resultOfTheBet(){
-//var tbodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
-//for (var i = 0; i < yourBet.length ; i++) {
-	// Insert a row at the end of table
-//var newRow = tbodyRef.insertRow();
 
-// Insert a cell at the end of the row
-//var newCell1 = newRow.insertCell();
-// Append a text node to the cell
-//var newText1 = document.createTextNode(yourBet[i].team1);
-//newCell1.appendChild(newText1);
+function resultOfTheMatches(){
+  for(j=0;j<7;j++){
+  var randomBet=Math.floor(Math.random()*3);
+}
+  var tbodyRef = document.getElementById('myTable2').getElementsByTagName('tbody')[0];
+ for (var i = 0; i < yourBet.length ; i++) {
+   var newRow = tbodyRef.insertRow();
+   var newCell1 = newRow.insertCell();
+   var newText1 = document.createTextNode(yourBet[i].team1);
+  newCell1.appendChild(newText1);
+   var newCell2 = newRow.insertCell();
+   var newText2 = document.createTextNode(yourBet[i].team2);
+  newCell2.appendChild(newText2);
+   var newCell3 = newRow.insertCell();
+   var newText3 = document.createTextNode(randomBet);
+  newCell3.appendChild(newText3);
+ }
+}
 
-// Insert a cell at the end of the row
-//var newCell2 = newRow.insertCell();
-// Append a text node to the cell
-//var newText2 = document.createTextNode(yourBet[i].team2);
-//newCell2.appendChild(newText2);
 
-// Insert a cell at the end of the row
-//var newCell3 = newRow.insertCell();
-// Append a text node to the cell
-//var newText3 = document.createTextNode(yourBet[i].bet);
-//newCell3.appendChild(newText3);
-//}
-//}
+
+
+
+
 
 function f1(val){  
   
@@ -112,3 +103,12 @@ $('ul#father>li').hover(function(){
 },function(){
 	$(this).find('ul#son').hide(400);        
 });
+
+//make a function that generates an array of 1 x 2
+// the length of the array == the length of the array of matches
+
+//  array generated [1,x,2,1,...] and your array or bets
+
+// for each elements of both array  you gonna compare all the elements
+// if it reachs the last elements return alert('congrats')
+// if el !== bet alert('loss')
