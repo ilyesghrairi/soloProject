@@ -31,7 +31,7 @@ var yourBet=[
 	bet:""
 },{
 	id:7,
-    team1:'Avenie Sportive De Soliman',
+    team1:'Avenir Sportive De Soliman',
     team2:'Avenir Sportive De Rejiche',
 	bet:""
 }
@@ -112,20 +112,14 @@ function resultOfTheMatches(){
  console.log(yourBet,resultBet)
 }
 
-
-
-
-
-
-
-function f1(val){  
-  
+function f1(e,val){  
 for (var i = yourBet.length-1; i >=0; i--) {
 	if(yourBet[i].id==val.id){
 		yourBet[i].bet=val.bet;
 		break;
 	}
 }
+e.target.classList.add( 'active'); 
 }
 
 
@@ -142,23 +136,14 @@ $('ul#father>li').hover(function(){
 },function(){
 	$(this).find('ul#son').hide(400);        
 });
-
-
-$("#checkOfResult").on("click",function(){
-   var arr=[];
+$("#checkOfResult").on("click",function(){   
   for(var i =0;i<yourBet.length;i++){
-      if(yourBet[i].bet===resultBet[i].bet){
-    arr.push("true")
-  }
-    arr.push("false")    
-  }
-  console.log(arr)
-    if(arr.indexOf("false") !== -1){
-      window.alert("YOU LOSE");
-    }
-    else{
-      window.alert("YOU WON");
-    }  
+      if(yourBet[i].bet!=resultBet[i].bet){
+               window.alert("YOU LOSE");
+                  return;
+              }
+     }
+     window.alert("YOU WON"); 
 })
 
 
